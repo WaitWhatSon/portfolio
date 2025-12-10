@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* overflow-x: hidden; */
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+
+  background-color: rgb(30, 28, 28);
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+
+
+
+
+/* ARTWORKS COLS AND ROWS */
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+/* WARSZTAT COLS AND ROWS */
+
+.grow {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.gcolumn {
+  -ms-flex: 33%;
+  /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.gcolumn img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gcolumn {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gcolumn {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+/* TITLE COLS AND ROWS */
+
+.trow {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.tcolumn {
+  /* IE10 */
+  flex: fit-content;
+  max-width: fit-content;
+  padding: 0 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.box {
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;
+}
+
+
+
+.overlay {
+
+  position: fixed;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(30, 28, 28);
+  z-index: 2;
+  /* cursor: pointer; */
+
+  width: 100%;
+  height: 200px;
+
+
+  mask: linear-gradient(transparent, rgb(30, 28, 28));
+  backdrop-filter: blur(10px);
+
+  margin: 0;
+  padding: 0;
+}
+
+.gridbox {
+  height: 70vh;
+  /* height: fit-content; */
+  overflow: hidden;
+}
+
+
+
+.expand {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  width: 100%;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1 {
+  font-family: Neumatic Gothic Round;
+  font-size: 83pt;
+  margin: 10pt;
+  /* color: aliceblue; */
+
+  background: linear-gradient(rgba(240, 248, 255, 0.466), aliceblue, rgba(240, 248, 255, 0.274));
+  background-clip: text;
+  color: transparent;
+
+  /* line-height: 75pt; */
+}
+
+h2 {
+  font-family: Neumatic Gothic Round;
+  font-size: 42pt;
+  margin: 10pt;
+
+  /* color: aliceblue; */
+
+  background: linear-gradient(rgba(240, 248, 255, 0.466), aliceblue, rgba(240, 248, 255, 0.274));
+  background-clip: text;
+  color: transparent;
+}
+
+.expand {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  /* margin: 10pt; */
+  padding: 10pt;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  /* margin: 10pt; */
+  color: aliceblue;
+  text-align: center;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+
+  color: rgba(240, 248, 255, 0.897);
+}
+
+.header a {
+  font-size: large;
+}
+
+
+.break_space {
+  margin: 60px;
+}
+
+
+
+
+
+
+#show_me {
+
+  display: none;
+
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.508);
+
+  z-index: 5;
+
+  align-items: center;
+  text-align: center;
+
+}
+
+#show_me_container img {
+  position: fixed;
+  padding: 5vh;
+  object-fit: scale-down;
+
+ /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+}
+
+@media (orientation: landscape) {
+  #show_me_container img {
+    /* width: 100%; */
+    height: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  #show_me_container img {
+    width: 100%;
+    /* height: 100%; */
+  }
+}
